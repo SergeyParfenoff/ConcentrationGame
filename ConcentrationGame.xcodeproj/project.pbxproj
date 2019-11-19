@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A508121C232E36A200CE00DB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508121B232E36A200CE00DB /* Card.swift */; };
 		A508121E232E38CA00CE00DB /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508121D232E38CA00CE00DB /* Concentration.swift */; };
+		A50CFC4223466F0E00D14267 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CFC4123466F0E00D14267 /* CardView.swift */; };
 		A5BBAF2A232972DC0063817A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BBAF29232972DC0063817A /* AppDelegate.swift */; };
 		A5BBAF2C232972DC0063817A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BBAF2B232972DC0063817A /* ViewController.swift */; };
 		A5BBAF2F232972DC0063817A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BBAF2D232972DC0063817A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		A508121B232E36A200CE00DB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A508121D232E38CA00CE00DB /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		A50CFC4123466F0E00D14267 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A5BBAF26232972DC0063817A /* ConcentrationGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcentrationGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BBAF29232972DC0063817A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5BBAF2B232972DC0063817A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				A508121B232E36A200CE00DB /* Card.swift */,
 				A508121D232E38CA00CE00DB /* Concentration.swift */,
 				A5BBAF2D232972DC0063817A /* Main.storyboard */,
+				A50CFC4123466F0E00D14267 /* CardView.swift */,
 				A5BBAF3B232A80490063817A /* SupportFiles */,
 				A5BBAF35232972DD0063817A /* Info.plist */,
 			);
@@ -153,6 +156,7 @@
 				A508121E232E38CA00CE00DB /* Concentration.swift in Sources */,
 				A508121C232E36A200CE00DB /* Card.swift in Sources */,
 				A5BBAF2A232972DC0063817A /* AppDelegate.swift in Sources */,
+				A50CFC4223466F0E00D14267 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22PJ946S5N;
 				INFOPLIST_FILE = ConcentrationGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -322,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22PJ946S5N;
 				INFOPLIST_FILE = ConcentrationGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

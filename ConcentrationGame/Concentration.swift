@@ -11,6 +11,7 @@ import Foundation
 class Concentration {
     
     private(set) var cards = [Card]()
+    
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             var foundIndex: Int?
@@ -32,11 +33,10 @@ class Concentration {
         }
     }
         
-    
     func chooseCard(at index: Int) {
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
-                if cards[matchIndex].identifier == cards[index].identifier {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
@@ -47,27 +47,12 @@ class Concentration {
         }
     }
     
-    init(numberOfPairsOfCard: Int) {
-        var tempCards = [Card]()
+    init(_ numberOfPairsOfCard: Int) {
         for _ in 1...numberOfPairsOfCard {
             let card = Card()
-            tempCards += [card, card]
+            cards += [card, card]
         }
-        for _ in tempCards.indices {
-            cards.append(tempCards.remove(at: tempCards.count.arc4random()))
-        }
+        cards.shuffle()
     }
 }
 
-extension Int {
-    func arc4random() -> Int {
-        if self > 0 {
-           return Int(arc4random_uniform(UInt32(self)))
-        } else if self < 0 {
-           return -Int(arc4random_uniform(UInt32(abs(self))))
-        } else {
-            return 0
-        }
-        
-    }
-}
