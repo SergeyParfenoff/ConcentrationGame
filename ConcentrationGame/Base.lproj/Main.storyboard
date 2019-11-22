@@ -17,79 +17,249 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVq-GF-byo">
+                                <rect key="frame" x="325" y="976" width="118" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dhB-Ag-AWV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Новая игра">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="v07-pS-8oj"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSA-kC-PAC">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="36"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6DH-rY-MXC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMA-qF-3m8">
-                                <rect key="frame" x="0.0" y="36" width="768" height="988"/>
+                                <rect key="frame" x="0.0" y="50" width="768" height="923"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-2L-AZh">
-                                        <rect key="frame" x="25" y="25" width="718" height="135"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FHW-8f-tUt">
+                                        <rect key="frame" x="20" y="20" width="728" height="642"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-nd-Svc" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="pmV-nd-Svc" secondAttribute="height" multiplier="6:9" id="urF-UM-axk"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-4f-CCv" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="125.5" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="vdN-4f-CCv" secondAttribute="height" multiplier="6:9" id="9Vw-6h-Y8D"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-vX-9K2" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="251" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="uSx-vX-9K2" secondAttribute="height" multiplier="6:9" id="lVk-l0-3Yb"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz1-3p-Dw6" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="377" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Kz1-3p-Dw6" secondAttribute="height" multiplier="6:9" id="YF2-NW-uRV"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-Er-zf2" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="502.5" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="uQ8-Er-zf2" secondAttribute="height" multiplier="6:9" id="rFw-rU-iNq"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hni-l2-5qy" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
-                                                <rect key="frame" x="628" y="0.0" width="90" height="135"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="hni-l2-5qy" secondAttribute="height" multiplier="6:9" id="Axl-zw-oma"/>
-                                                </constraints>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-2L-AZh">
+                                                <rect key="frame" x="0.0" y="0.0" width="728" height="154.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-nd-Svc" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="pmV-nd-Svc" secondAttribute="height" multiplier="6:9" id="urF-UM-axk"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-4f-CCv" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="125" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="vdN-4f-CCv" secondAttribute="height" multiplier="6:9" id="9Vw-6h-Y8D"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-vX-9K2" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="250" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="uSx-vX-9K2" secondAttribute="height" multiplier="6:9" id="lVk-l0-3Yb"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz1-3p-Dw6" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="375" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Kz1-3p-Dw6" secondAttribute="height" multiplier="6:9" id="YF2-NW-uRV"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-Er-zf2" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="500" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="uQ8-Er-zf2" secondAttribute="height" multiplier="6:9" id="rFw-rU-iNq"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hni-l2-5qy" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="625" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hni-l2-5qy" secondAttribute="height" multiplier="6:9" id="Axl-zw-oma"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ErX-gF-djI">
+                                                <rect key="frame" x="0.0" y="162.5" width="728" height="154.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f88-K4-sKx" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="f88-K4-sKx" secondAttribute="height" multiplier="6:9" id="XmK-tv-q3l"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-Bm-zt8" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="125" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="yh9-Bm-zt8" secondAttribute="height" multiplier="6:9" id="P3k-cg-w83"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIz-cC-7e9" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="250" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="oIz-cC-7e9" secondAttribute="height" multiplier="6:9" id="B6M-Bq-t40"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLu-dh-BdY" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="375" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="oLu-dh-BdY" secondAttribute="height" multiplier="6:9" id="sJZ-lE-e7O"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-GV-Pe6" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="500" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="gs7-GV-Pe6" secondAttribute="height" multiplier="6:9" id="EJk-8P-ENE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FK2-ZP-5pJ" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="625" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="FK2-ZP-5pJ" secondAttribute="height" multiplier="6:9" id="hJK-uW-dAp"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPE-oO-Qe7">
+                                                <rect key="frame" x="0.0" y="325" width="728" height="154.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-pb-ULL" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Iaz-pb-ULL" secondAttribute="height" multiplier="6:9" id="sI1-2N-YPz"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJe-hm-c7S" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="125" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="vJe-hm-c7S" secondAttribute="height" multiplier="6:9" id="WHc-Ei-4S4"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjR-Xe-AoA" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="250" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="yjR-Xe-AoA" secondAttribute="height" multiplier="6:9" id="Qis-NR-s04"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-0y-U5u" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="375" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="pwD-0y-U5u" secondAttribute="height" multiplier="6:9" id="rGC-cE-eXM"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeL-AB-r4R" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="500" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="XeL-AB-r4R" secondAttribute="height" multiplier="6:9" id="aWV-gk-Qze"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-yS-GEo" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="625" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fo0-yS-GEo" secondAttribute="height" multiplier="6:9" id="Pzz-Ax-pG8"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-Z0-HhN">
+                                                <rect key="frame" x="0.0" y="487.5" width="728" height="154.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q94-ov-Zoo" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Q94-ov-Zoo" secondAttribute="height" multiplier="6:9" id="e6s-Jg-Z5i"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-B5-S7g" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="125" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="bMg-B5-S7g" secondAttribute="height" multiplier="6:9" id="MaL-md-IUb"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqI-EV-1bS" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="250" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="nqI-EV-1bS" secondAttribute="height" multiplier="6:9" id="NgC-Be-0zA"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-dr-DFR" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="375" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Qia-dr-DFR" secondAttribute="height" multiplier="6:9" id="ahy-1S-9si"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaK-kf-VV5" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="500" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="OaK-kf-VV5" secondAttribute="height" multiplier="6:9" id="1CM-TI-z9r"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-pi-gzb" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                                        <rect key="frame" x="625" y="0.0" width="103" height="154.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8mZ-pi-gzb" secondAttribute="height" multiplier="6:9" id="yEZ-KL-5Of"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="8SG-Bw-z0W"/>
+                                            <constraint firstAttribute="width" secondItem="FHW-8f-tUt" secondAttribute="height" multiplier="364:321" id="meh-x9-e1e"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="aYf-2L-AZh" firstAttribute="top" secondItem="VMA-qF-3m8" secondAttribute="top" priority="750" constant="25" id="H92-p7-jPf"/>
-                                    <constraint firstAttribute="trailing" secondItem="aYf-2L-AZh" secondAttribute="trailing" constant="25" id="Wkd-X1-cJz"/>
-                                    <constraint firstItem="aYf-2L-AZh" firstAttribute="leading" secondItem="VMA-qF-3m8" secondAttribute="leading" constant="25" id="s6h-9n-zmH"/>
+                                    <constraint firstItem="FHW-8f-tUt" firstAttribute="leading" secondItem="VMA-qF-3m8" secondAttribute="leading" constant="20" symbolic="YES" id="UVl-DQ-due"/>
+                                    <constraint firstItem="FHW-8f-tUt" firstAttribute="top" secondItem="VMA-qF-3m8" secondAttribute="top" constant="20" symbolic="YES" id="iEn-cB-j4d"/>
+                                    <constraint firstAttribute="bottom" secondItem="FHW-8f-tUt" secondAttribute="bottom" constant="20" symbolic="YES" id="kx3-PC-L8L"/>
+                                    <constraint firstAttribute="trailing" secondItem="FHW-8f-tUt" secondAttribute="trailing" constant="20" symbolic="YES" id="ouz-Ov-vdJ"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kx3-PC-L8L"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="VMA-qF-3m8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2tz-ug-pSc"/>
-                            <constraint firstItem="VMA-qF-3m8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ICP-nS-3cJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eVq-GF-byo" secondAttribute="bottom" constant="8" id="GOv-XC-bA7"/>
                             <constraint firstItem="VMA-qF-3m8" firstAttribute="top" secondItem="QSA-kC-PAC" secondAttribute="bottom" id="QUc-qU-7Oi"/>
+                            <constraint firstItem="eVq-GF-byo" firstAttribute="firstBaseline" secondItem="VMA-qF-3m8" secondAttribute="baseline" constant="31.5" symbolType="layoutAnchor" id="YJb-m7-swf"/>
+                            <constraint firstItem="eVq-GF-byo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cN6-DO-XPG"/>
                             <constraint firstItem="QSA-kC-PAC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dT2-JQ-TkT"/>
                             <constraint firstItem="QSA-kC-PAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gnL-df-U4j"/>
                             <constraint firstItem="QSA-kC-PAC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hLN-NG-RrQ"/>
@@ -98,18 +268,38 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="aspectRatioConstrain" destination="meh-x9-e1e" id="JUD-ES-ySP"/>
+                        <outlet property="bottomConstrain" destination="kx3-PC-L8L" id="aEb-mj-EED"/>
                         <outlet property="flipCountLabel" destination="QSA-kC-PAC" id="c8O-xk-GBN"/>
                         <outletCollection property="cardViews" destination="hni-l2-5qy" collectionClass="NSMutableArray" id="eBM-kh-Phe"/>
+                        <outletCollection property="cardViews" destination="uSx-vX-9K2" collectionClass="NSMutableArray" id="KBQ-Qm-5Wx"/>
+                        <outletCollection property="cardViews" destination="pmV-nd-Svc" collectionClass="NSMutableArray" id="Sma-42-Esj"/>
+                        <outletCollection property="cardViews" destination="vdN-4f-CCv" collectionClass="NSMutableArray" id="I5i-5r-q11"/>
                         <outletCollection property="cardViews" destination="uQ8-Er-zf2" collectionClass="NSMutableArray" id="l2u-s4-uhE"/>
                         <outletCollection property="cardViews" destination="Kz1-3p-Dw6" collectionClass="NSMutableArray" id="u3N-nl-5te"/>
-                        <outletCollection property="cardViews" destination="uSx-vX-9K2" collectionClass="NSMutableArray" id="KBQ-Qm-5Wx"/>
-                        <outletCollection property="cardViews" destination="vdN-4f-CCv" collectionClass="NSMutableArray" id="I5i-5r-q11"/>
-                        <outletCollection property="cardViews" destination="pmV-nd-Svc" collectionClass="NSMutableArray" id="Sma-42-Esj"/>
+                        <outletCollection property="cardViews" destination="FK2-ZP-5pJ" collectionClass="NSMutableArray" id="vmd-zk-FOV"/>
+                        <outletCollection property="cardViews" destination="oIz-cC-7e9" collectionClass="NSMutableArray" id="kVV-34-9ZV"/>
+                        <outletCollection property="cardViews" destination="f88-K4-sKx" collectionClass="NSMutableArray" id="QBQ-7S-4kH"/>
+                        <outletCollection property="cardViews" destination="yh9-Bm-zt8" collectionClass="NSMutableArray" id="EBS-hL-IbC"/>
+                        <outletCollection property="cardViews" destination="oLu-dh-BdY" collectionClass="NSMutableArray" id="jca-LZ-wwJ"/>
+                        <outletCollection property="cardViews" destination="gs7-GV-Pe6" collectionClass="NSMutableArray" id="Yly-gN-vPc"/>
+                        <outletCollection property="cardViews" destination="Iaz-pb-ULL" collectionClass="NSMutableArray" id="Zne-H0-yvS"/>
+                        <outletCollection property="cardViews" destination="XeL-AB-r4R" collectionClass="NSMutableArray" id="Lc6-p8-cA9"/>
+                        <outletCollection property="cardViews" destination="yjR-Xe-AoA" collectionClass="NSMutableArray" id="0zJ-sj-oK7"/>
+                        <outletCollection property="cardViews" destination="pwD-0y-U5u" collectionClass="NSMutableArray" id="fej-vE-Fpt"/>
+                        <outletCollection property="cardViews" destination="fo0-yS-GEo" collectionClass="NSMutableArray" id="fjr-jX-uO5"/>
+                        <outletCollection property="cardViews" destination="vJe-hm-c7S" collectionClass="NSMutableArray" id="7Vx-kn-k2q"/>
+                        <outletCollection property="cardViews" destination="OaK-kf-VV5" collectionClass="NSMutableArray" id="2LX-sR-QKE"/>
+                        <outletCollection property="cardViews" destination="Qia-dr-DFR" collectionClass="NSMutableArray" id="J9F-D7-Wmw"/>
+                        <outletCollection property="cardViews" destination="nqI-EV-1bS" collectionClass="NSMutableArray" id="pNh-h7-EZm"/>
+                        <outletCollection property="cardViews" destination="Q94-ov-Zoo" collectionClass="NSMutableArray" id="ULW-Cu-ECZ"/>
+                        <outletCollection property="cardViews" destination="bMg-B5-S7g" collectionClass="NSMutableArray" id="qgT-Cj-7jA"/>
+                        <outletCollection property="cardViews" destination="8mZ-pi-gzb" collectionClass="NSMutableArray" id="0eX-fM-fQ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3881.2500000000005" y="4.3478260869565224"/>
+            <point key="canvasLocation" x="-3851.5625" y="12.890625"/>
         </scene>
     </scenes>
 </document>

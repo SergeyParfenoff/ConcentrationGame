@@ -23,7 +23,7 @@ class CardView: UIView {
             let label = UILabel()
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
-            let font = UIFont.preferredFont(forTextStyle: .title3)
+            let font = UIFont(name: UIFont.preferredFont(forTextStyle: .body).fontName, size: rect.width/1.5)
             label.attributedText = NSAttributedString(string: emoji, attributes: [.paragraphStyle: paragraphStyle, .font: font])
             label.drawText(in: rect)
         } else {

@@ -10,8 +10,9 @@ import Foundation
 
 class Concentration {
     
+    private(set) var score = 0
     private(set) var cards = [Card]()
-    
+    private(set) var indexesOfMatchingPair: [Int]?
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             var foundIndex: Int?
@@ -37,13 +38,20 @@ class Concentration {
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 if cards[matchIndex] == cards[index] {
+                    indexesOfMatchingPair = [index, matchIndex]
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
+                    score += 2
+                } else {
+                    indexesOfMatchingPair = nil
+                    if cards[index].hasBeenOpened { score -= 1 }
                 }
                 cards[index].isFaceUp = true
             } else {
                 indexOfOneAndOnlyFaceUpCard = index
+                indexesOfMatchingPair = nil
             }
+            cards[index].hasBeenOpened = true
         }
     }
     
